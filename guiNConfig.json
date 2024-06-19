@@ -42,12 +42,12 @@
     "domainStrategy": "AsIs",
     "domainStrategy4Singbox": null,
     "domainMatcher": null,
-    "routingIndexId": "5267969807550722230",
+    "routingIndexId": "4867360776379822757",
     "enableRoutingAdvanced": true
   },
   "guiItem": {
     "autoRun": false,
-    "enableStatistics": false,
+    "enableStatistics": true,
     "keepOlderDedupl": false,
     "ignoreGeoUpdateCore": true,
     "autoUpdateInterval": 10,
@@ -60,19 +60,19 @@
   "uiItem": {
     "enableAutoAdjustMainLvColWidth": true,
     "enableUpdateSubOnlyRemarksExist": false,
-    "mainWidth": 1167,
-    "mainHeight": 695,
-    "mainGirdHeight1": 251,
-    "mainGirdHeight2": 251,
+    "mainWidth": 1200,
+    "mainHeight": 800,
+    "mainGirdHeight1": 303,
+    "mainGirdHeight2": 303,
     "colorModeDark": false,
-    "followSystemTheme": false,
+    "followSystemTheme": true,
     "colorPrimaryName": null,
     "currentLanguage": "en",
     "currentFontFamily": null,
     "currentFontSize": 0,
-    "enableDragDropSort": false,
-    "doubleClick2Activate": false,
-    "autoHideStartup": false,
+    "enableDragDropSort": true,
+    "doubleClick2Activate": true,
+    "autoHideStartup": true,
     "mainMsgFilter": null,
     "mainColumnItem": [
       {
@@ -122,22 +122,22 @@
       },
       {
         "Name": "todayUp",
-        "Width": -1,
+        "Width": 100,
         "Index": 9
       },
       {
         "Name": "todayDown",
-        "Width": -1,
+        "Width": 100,
         "Index": 10
       },
       {
         "Name": "totalUp",
-        "Width": -1,
+        "Width": 100,
         "Index": 11
       },
       {
         "Name": "totalDown",
-        "Width": -1,
+        "Width": 100,
         "Index": 12
       }
     ]
@@ -170,7 +170,7 @@
         "tls"
       ],
       "routeOnly": false,
-      "allowLANConn": false,
+      "allowLANConn": true,
       "newPort4LAN": false,
       "user": "",
       "pass": ""
