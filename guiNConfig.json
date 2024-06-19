@@ -1,10 +1,10 @@
 {
-  "indexId": null,
-  "subIndexId": null,
+  "indexId": "4777721742779062863",
+  "subIndexId": "5704269182607112445",
   "sysProxyType": 0,
   "systemProxyExceptions": "",
   "systemProxyAdvancedProtocol": null,
-  "runningCoreType": 0,
+  "runningCoreType": 24,
   "coreBasicItem": {
     "logEnabled": false,
     "loglevel": "warning",

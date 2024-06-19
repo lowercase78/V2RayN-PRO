@@ -1,6 +1,6 @@
 {
-  "indexId": "4629017448898989535",
-  "subIndexId": null,
+  "indexId": "4777721742779062863",
+  "subIndexId": "5704269182607112445",
   "sysProxyType": 0,
   "systemProxyExceptions": "",
   "systemProxyAdvancedProtocol": null,
@@ -77,67 +77,67 @@
     "mainColumnItem": [
       {
         "Name": "configType",
-        "Width": 126,
+        "Width": 80,
         "Index": 0
       },
       {
         "Name": "remarks",
-        "Width": 173,
+        "Width": 150,
         "Index": 1
       },
       {
         "Name": "address",
-        "Width": 98,
+        "Width": 120,
         "Index": 2
       },
       {
         "Name": "port",
-        "Width": 57,
+        "Width": 60,
         "Index": 3
       },
       {
         "Name": "network",
-        "Width": 90,
+        "Width": 100,
         "Index": 4
       },
       {
         "Name": "streamSecurity",
-        "Width": 53,
+        "Width": 100,
         "Index": 5
       },
       {
         "Name": "subRemarks",
-        "Width": 101,
+        "Width": 100,
         "Index": 6
       },
       {
         "Name": "delayVal",
-        "Width": 90,
+        "Width": 100,
         "Index": 7
       },
       {
         "Name": "speedVal",
-        "Width": 101,
+        "Width": 100,
         "Index": 8
       },
       {
         "Name": "todayUp",
-        "Width": 150,
+        "Width": 100,
         "Index": 9
       },
       {
         "Name": "todayDown",
-        "Width": 166,
+        "Width": 100,
         "Index": 10
       },
       {
         "Name": "totalUp",
-        "Width": 144,
+        "Width": 100,
         "Index": 11
       },
       {
         "Name": "totalDown",
-        "Width": 161,
+        "Width": 100,
         "Index": 12
       }
     ]
