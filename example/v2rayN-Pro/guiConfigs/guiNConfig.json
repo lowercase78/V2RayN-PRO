@@ -1,5 +1,5 @@
 {
-  "indexId": "4777721742779062863",
+  "indexId": "5097432377334980736",
   "subIndexId": "5704269182607112445",
   "sysProxyType": 0,
   "systemProxyExceptions": "",
@@ -50,7 +50,7 @@
     "enableStatistics": true,
     "keepOlderDedupl": false,
     "ignoreGeoUpdateCore": true,
-    "autoUpdateInterval": 10,
+    "autoUpdateInterval": 0,
     "checkPreReleaseUpdate": false,
     "enableSecurityProtocolTls13": false,
     "trayMenuServersLimit": 20,
@@ -72,72 +72,72 @@
     "currentFontSize": 0,
     "enableDragDropSort": true,
     "doubleClick2Activate": true,
-    "autoHideStartup": true,
+    "autoHideStartup": false,
     "mainMsgFilter": null,
     "mainColumnItem": [
       {
         "Name": "configType",
-        "Width": 80,
+        "Width": 67,
         "Index": 0
       },
       {
         "Name": "remarks",
-        "Width": 150,
+        "Width": 236,
         "Index": 1
       },
       {
         "Name": "address",
-        "Width": 120,
+        "Width": 274,
         "Index": 2
       },
       {
         "Name": "port",
-        "Width": 60,
+        "Width": 57,
         "Index": 3
       },
       {
         "Name": "network",
-        "Width": 100,
+        "Width": 90,
         "Index": 4
       },
       {
         "Name": "streamSecurity",
-        "Width": 100,
+        "Width": 53,
         "Index": 5
       },
       {
         "Name": "subRemarks",
-        "Width": 100,
+        "Width": 164,
         "Index": 6
       },
       {
         "Name": "delayVal",
-        "Width": 100,
+        "Width": 90,
         "Index": 7
       },
       {
         "Name": "speedVal",
-        "Width": 100,
+        "Width": 101,
         "Index": 8
       },
       {
         "Name": "todayUp",
-        "Width": 100,
+        "Width": 150,
         "Index": 9
       },
       {
         "Name": "todayDown",
-        "Width": 100,
+        "Width": 166,
         "Index": 10
       },
       {
         "Name": "totalUp",
-        "Width": 100,
+        "Width": 144,
         "Index": 11
       },
       {
         "Name": "totalDown",
-        "Width": 100,
+        "Width": 161,
         "Index": 12
       }
     ]
