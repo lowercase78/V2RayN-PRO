@@ -1,5 +1,5 @@
 {
-  "indexId": "5097432377334980736",
+  "indexId": "4957249956322970468",
   "subIndexId": "5704269182607112445",
   "sysProxyType": 0,
   "systemProxyExceptions": "",
@@ -18,7 +18,7 @@
   "tunModeItem": {
     "enableTun": false,
     "strictRoute": true,
-    "stack": null,
+    "stack": "gvisor",
     "mtu": 9000,
     "enableExInbound": false,
     "enableIPv6Address": true
@@ -42,7 +42,7 @@
     "domainStrategy": "AsIs",
     "domainStrategy4Singbox": null,
     "domainMatcher": null,
-    "routingIndexId": "4867360776379822757",
+    "routingIndexId": "5662777957270848102",
     "enableRoutingAdvanced": true
   },
   "guiItem": {
@@ -87,7 +87,7 @@
       },
       {
         "Name": "address",
-        "Width": 274,
+        "Width": 271,
         "Index": 2
       },
       {
@@ -170,7 +170,7 @@
         "tls"
       ],
       "routeOnly": false,
-      "allowLANConn": true,
+      "allowLANConn": false,
       "newPort4LAN": false,
       "user": "",
       "pass": ""
