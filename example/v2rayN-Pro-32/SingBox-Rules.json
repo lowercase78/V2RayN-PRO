@@ -1,0 +1,30 @@
+[
+  {
+    "tag": "geosite-private",
+    "type": "remote",
+    "format": "binary",
+    "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-private.srs",
+    "download_detour": "proxy"
+  },
+  {
+    "tag": "geosite-category-ads-all",
+    "type": "remote",
+    "format": "binary",
+    "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+    "download_detour": "proxy"
+  },
+  {
+    "tag": "geosite-category-ir",
+    "type": "remote",
+    "format": "binary",
+    "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ir.srs",
+    "download_detour": "proxy"
+  },
+  {
+    "tag": "geoip-ir",
+    "type": "remote",
+    "format": "binary",
+    "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+    "download_detour": "proxy"
+  }
+]
