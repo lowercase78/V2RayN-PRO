@@ -1,9 +1,5 @@
 [
   {
-    "remarks": "⚡️ Frag - WorkerLess ( Youtube, X , ... )",
-    "log": {
-      "loglevel": "warning"
-    },
     "dns": {
       "hosts": {
         "cloudflare-dns.com": [
@@ -65,24 +61,27 @@
         "tag": "http-in"
       }
     ],
+    "log": {
+      "loglevel": "warning"
+    },
     "outbounds": [
       {
-        "tag": "fragment",
         "protocol": "freedom",
         "settings": {
+          "domainStrategy": "UseIP",
           "fragment": {
-            "packets": "tlshello",
+            "interval": "10-20",
             "length": "10-20",
-            "interval": "10-20"
-          },
-          "domainStrategy": "UseIP"
+            "packets": "tlshello"
+          }
         },
         "streamSettings": {
           "sockopt": {
             "tcpKeepAliveIdle": 100,
             "tcpNoDelay": true
           }
-        }
+        },
+        "tag": "fragment"
       },
       {
         "protocol": "dns",
@@ -112,11 +111,11 @@
           "security": "tls",
           "tlsSettings": {
             "allowInsecure": false,
-            "fingerprint": "chrome",
             "alpn": [
                             "h2",
                             "http\/1.1"
             ],
+            "fingerprint": "chrome",
             "serverName": "google.com"
           },
           "wsSettings": {
@@ -154,22 +153,23 @@
         }
       },
       "system": {
-        "statsOutboundUplink": true,
-        "statsOutboundDownlink": true
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
       }
     },
+    "remarks": "⚡️ Frag - WorkerLess ( Youtube, X , ... )",
     "routing": {
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
+          "enabled": true,
           "inboundTag": [
                         "socks-in",
                         "http-in"
           ],
-          "type": "field",
-          "port": "53",
           "outboundTag": "dns-out",
-          "enabled": true
+          "port": "53",
+          "type": "field"
         },
         {
           "ip": [
@@ -188,9 +188,9 @@
           "type": "field"
         },
         {
+          "network": "tcp,udp",
           "outboundTag": "fragment",
-          "type": "field",
-          "network": "tcp,udp"
+          "type": "field"
         }
       ]
     },
@@ -200,16 +200,16 @@
   {
     "dns": {
       "hosts": {
-        "domain:engage.cloudflareclient.com": [
-                    "188.114.96.106",
-                    "188.114.97.253",
-                    "188.114.98.158"
-        ],
         "cloudflare-dns.com": [
                     "104.16.248.249",
                     "104.16.249.249",
                     "2606:4700::6810:f8f9",
                     "2606:4700::6810:f9f9"
+        ],
+        "domain:engage.cloudflareclient.com": [
+                    "188.114.96.106",
+                    "188.114.97.253",
+                    "188.114.98.158"
         ],
         "geosite:category-porn": "127.0.0.1"
       },
@@ -311,8 +311,8 @@
         }
       },
       "system": {
-        "statsOutboundUplink": true,
-        "statsOutboundDownlink": true
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
       }
     },
     "remarks": "🕊 XRAY-WARP (GFW-knocker Mode)",
@@ -367,6 +367,91 @@
         {
           "outboundTag": "proxy",
           "port": "0-65535"
+        }
+      ]
+    },
+    "stats": {
+    }
+  },
+  {
+    "dns": {
+      "hosts": {
+        "cloudflare-dns.com": [
+                    "104.16.248.249",
+                    "104.16.249.249",
+                    "2606:4700::6810:f8f9",
+                    "2606:4700::6810:f9f9"
+        ],
+        "domain:engage.cloudflareclient.com": [
+                    "188.114.96.106",
+                    "188.114.97.253",
+                    "188.114.98.158"
+        ]
+      },
+      "servers": [
+                "https:\/\/cloudflare-dns.com\/dns-query"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "::",
+        "port": 2408,
+        "protocol": "dokodemo-door",
+        "settings": {
+          "address": "engage.cloudflareclient.com",
+          "network": "udp",
+          "port": 2408
+        },
+        "tag": "warp-in"
+      }
+    ],
+    "log": {
+      "loglevel": "warning"
+    },
+    "outbounds": [
+      {
+        "protocol": "wireguard",
+        "settings": {
+          "address": [
+                        "172.16.0.2\/32",
+                        "2606:4700:110:85a3:faf3:f4d3:bca2:9eee\/128"
+          ],
+          "mtu": 1280,
+          "peers": [
+            {
+              "endpoint": "engage.cloudflareclient.com:2408",
+              "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+            }
+          ],
+          "reserved": [
+                        132,
+                        96,
+                        93
+          ],
+          "secretKey": "kK0/EZYlnEmFeEi0diDUxTybECG73cJMqsX78PQ35WA="
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "dns",
+        "tag": "dns-out"
+      }
+    ],
+    "remarks": "✨ WARP Proxy (use this with WireGuard)",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+                        "warp-in"
+          ],
+          "outboundTag": "proxy"
+        },
+        {
+          "inboundTag": [
+                        "dns-in"
+          ],
+          "outboundTag": "dns-out"
         }
       ]
     },
