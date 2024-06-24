@@ -206,7 +206,7 @@
                     "2606:4700::6810:f8f9",
                     "2606:4700::6810:f9f9"
         ],
-        "domain:engage.cloudflareclient.com": [
+        "engage.cloudflareclient.com": [
                     "188.114.96.106",
                     "188.114.97.253",
                     "188.114.98.158"
@@ -382,7 +382,7 @@
                     "2606:4700::6810:f8f9",
                     "2606:4700::6810:f9f9"
         ],
-        "domain:engage.cloudflareclient.com": [
+        "engage.cloudflareclient.com": [
                     "188.114.96.106",
                     "188.114.97.253",
                     "188.114.98.158"
