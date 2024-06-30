@@ -82,12 +82,12 @@
       },
       {
         "Name": "remarks",
-        "Width": 236,
+        "Width": 246,
         "Index": 1
       },
       {
         "Name": "address",
-        "Width": 271,
+        "Width": 280,
         "Index": 2
       },
       {
@@ -158,6 +158,18 @@
   "hysteriaItem": {
     "up_mbps": 100,
     "down_mbps": 100
+  },
+  "clashUIItem": {
+    "ruleMode": 0,
+    "showInTaskbar": false,
+    "enableIPv6": false,
+    "enableMixinContent": false,
+    "proxiesSorting": 0,
+    "proxiesAutoRefresh": false,
+    "proxiesAutoDelayTestInterval": 10,
+    "connectionsSorting": 0,
+    "connectionsAutoRefresh": false,
+    "connectionsRefreshInterval": 2
   },
   "inbound": [
     {

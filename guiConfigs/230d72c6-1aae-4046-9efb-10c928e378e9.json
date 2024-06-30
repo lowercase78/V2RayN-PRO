@@ -1,8 +1,4 @@
 {
-  "remarks": "\u26A1\uFE0F Frag - WorkerLess ( Youtube, X , ... )",
-  "log": {
-    "loglevel": "warning"
-  },
   "dns": {
     "hosts": {
       "cloudflare-dns.com": [
@@ -64,24 +60,27 @@
       "tag": "http-in"
     }
   ],
+  "log": {
+    "loglevel": "warning"
+  },
   "outbounds": [
     {
-      "tag": "fragment",
       "protocol": "freedom",
       "settings": {
+        "domainStrategy": "UseIP",
         "fragment": {
-          "packets": "tlshello",
+          "interval": "10-20",
           "length": "10-20",
-          "interval": "10-20"
-        },
-        "domainStrategy": "UseIP"
+          "packets": "tlshello"
+        }
       },
       "streamSettings": {
         "sockopt": {
           "tcpKeepAliveIdle": 100,
           "tcpNoDelay": true
         }
-      }
+      },
+      "tag": "fragment"
     },
     {
       "protocol": "dns",
@@ -111,11 +110,11 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
+          "fingerprint": "chrome",
           "serverName": "google.com"
         },
         "wsSettings": {
@@ -152,22 +151,23 @@
       }
     },
     "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
+      "statsOutboundDownlink": true,
+      "statsOutboundUplink": true
     }
   },
+  "remarks": "\u26A1\uFE0F Frag - WorkerLess ( Youtube, X , ... )",
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
       {
+        "enabled": true,
         "inboundTag": [
           "socks-in",
           "http-in"
         ],
-        "type": "field",
-        "port": "53",
         "outboundTag": "dns-out",
-        "enabled": true
+        "port": "53",
+        "type": "field"
       },
       {
         "ip": [
@@ -186,9 +186,9 @@
         "type": "field"
       },
       {
+        "network": "tcp,udp",
         "outboundTag": "fragment",
-        "type": "field",
-        "network": "tcp,udp"
+        "type": "field"
       }
     ]
   },
