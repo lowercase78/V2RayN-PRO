@@ -1,6 +1,15 @@
 # نرم افزار دسکتاپ V2RayN به همراه تنظیمات بهینه برای ایران به همراه هسته سینگ‌باکس‌پلاس و ایکس‌ری ناکر
 
-![V2RaN](/images/V2RaN.jpg)
+
+
+|Document language ：|Link|
+----|----
+|English|<a href="./README_EN.md">English Document</a>|
+|中文|<a href="./README_ZH.md">中文文档</a>|
+|Türkiye|<a href="./README_TUR.md">Türkçe Dokümantasyon</a>|
+
+
+![V2RaN](./images/V2RaN.jpg)
 
 ### تغییرات انجام شده در کانفیگ :
 
