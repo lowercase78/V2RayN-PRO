@@ -1,5 +1,5 @@
 {
-  "indexId": "4957249956322970468",
+  "indexId": "4725752199864856711",
   "subIndexId": "5704269182607112445",
   "sysProxyType": 0,
   "systemProxyExceptions": "",
@@ -60,7 +60,7 @@
   "uiItem": {
     "enableAutoAdjustMainLvColWidth": true,
     "enableUpdateSubOnlyRemarksExist": false,
-    "mainWidth": 1200,
+    "mainWidth": 1282,
     "mainHeight": 800,
     "mainGirdHeight1": 303,
     "mainGirdHeight2": 303,
@@ -87,7 +87,7 @@
       },
       {
         "Name": "address",
-        "Width": 280,
+        "Width": 282,
         "Index": 2
       },
       {
@@ -107,7 +107,7 @@
       },
       {
         "Name": "subRemarks",
-        "Width": 164,
+        "Width": 167,
         "Index": 6
       },
       {

@@ -1,0 +1,196 @@
+{
+  "remarks": "\u26A1\uFE0F Frag - WorkerLess ( Youtube, X , ... )",
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "hosts": {
+      "cloudflare-dns.com": [
+        "104.16.248.249",
+        "104.16.249.249",
+        "104.16.133.229",
+        "104.16.132.229",
+        "104.17.147.22",
+        "104.17.148.22",
+        "172.64.33.103",
+        "108.162.193.103",
+        "173.245.59.103",
+        "172.64.32.128",
+        "108.162.192.128",
+        "173.245.58.128"
+      ],
+      "geosite:category-ads-all": "127.0.0.1",
+      "geosite:category-ads-ir": "127.0.0.1",
+      "geosite:category-porn": "127.0.0.1"
+    },
+    "servers": [
+      "https://cloudflare-dns.com/dns-query"
+    ],
+    "tag": "dns"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "socks-in"
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "http-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "10-20",
+          "interval": "10-20"
+        },
+        "domainStrategy": "UseIP"
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "google.com",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "79fec513-71a0-4460-a5f6-92a23e4b4c83",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "google.com"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "google.com"
+          },
+          "path": "/"
+        }
+      },
+      "tag": "fake-outbound"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "socks-in",
+          "http-in"
+        ],
+        "type": "field",
+        "port": "53",
+        "outboundTag": "dns-out",
+        "enabled": true
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:category-ads-all",
+          "geosite:category-ads-ir",
+          "geosite:category-porn"
+        ],
+        "outboundTag": "block",
+        "type": "field"
+      },
+      {
+        "outboundTag": "fragment",
+        "type": "field",
+        "network": "tcp,udp"
+      }
+    ]
+  },
+  "stats": {}
+}
