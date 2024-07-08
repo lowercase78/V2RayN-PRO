@@ -1,5 +1,6 @@
 [
 {
+  "remarks": "💎 WARP on WARP Sing-Box",
   "log": {
     "level": "warn",
     "timestamp": true
@@ -74,6 +75,25 @@
     {
       "type": "wireguard",
       "tag": "proxy",
+	  "detour": "warp ir",
+      "server": "162.159.192.198",
+      "server_port": 5279,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8f81:d551:a0:532e:a2b3/128"
+      ],
+      "private_key": "EPP4uA4bLD\u002Bkb\u002BSjb92lgEFUGqDaPgNK5lf4J0Xs6nw=",
+      "peer_public_key": "bmXOC\u002BF1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        120,
+        203,
+        41
+      ],
+      "mtu": 1280
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp ir",
       "server": "162.159.192.198",
       "server_port": 5279,
       "local_address": [
