@@ -1,6 +1,5 @@
 [
 {
-  "remarks": "💎 WARP on WARP Sing-Box",
   "log": {
     "level": "warn",
     "timestamp": true
