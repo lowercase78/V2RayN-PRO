@@ -1,7 +1,6 @@
 {
-  "indexId": "4725752199864856711",
-  "subIndexId": "5704269182607112445",
-  "sysProxyType": 0,
+  "indexId": "5652771643850943480",
+  "subIndexId": "4723723187883255307",
   "systemProxyExceptions": "",
   "systemProxyAdvancedProtocol": null,
   "runningCoreType": 24,
@@ -62,8 +61,9 @@
     "enableUpdateSubOnlyRemarksExist": false,
     "mainWidth": 1282,
     "mainHeight": 800,
-    "mainGirdHeight1": 303,
-    "mainGirdHeight2": 303,
+    "mainGirdHeight1": 325,
+    "mainGirdHeight2": 325,
+    "mainGirdOrientation": 1,
     "colorModeDark": false,
     "followSystemTheme": true,
     "colorPrimaryName": null,
@@ -140,7 +140,8 @@
         "Width": 161,
         "Index": 12
       }
-    ]
+    ],
+    "showInTaskbar": false
   },
   "constItem": {
     "defIEProxyExceptions": "localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*",
@@ -161,7 +162,6 @@
   },
   "clashUIItem": {
     "ruleMode": 0,
-    "showInTaskbar": false,
     "enableIPv6": false,
     "enableMixinContent": false,
     "proxiesSorting": 0,
@@ -170,6 +170,12 @@
     "connectionsSorting": 0,
     "connectionsAutoRefresh": false,
     "connectionsRefreshInterval": 2
+  },
+  "systemProxyItem": {
+    "sysProxyType": 0,
+    "systemProxyExceptions": "",
+    "notProxyLocalAddress": true,
+    "systemProxyAdvancedProtocol": null
   },
   "inbound": [
     {
