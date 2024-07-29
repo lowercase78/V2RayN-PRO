@@ -1,0 +1,216 @@
+[
+  {
+    "log": {
+      "level": "info",
+      "timestamp": true
+    },
+    "dns": {
+      "servers": [
+        {
+          "tag": "backup",
+          "address": "https://8.8.8.8/dns-query",
+          "strategy": "ipv4_only",
+          "detour": "proxy"
+        },
+        {
+          "tag": "remote",
+          "address": "tcp://8.8.8.8",
+          "strategy": "ipv4_only",
+          "detour": "proxy"
+        },
+        {
+          "tag": "local",
+          "address": "local",
+          "strategy": "ipv4_only",
+          "detour": "direct"
+        },
+        {
+          "tag": "block",
+          "address": "rcode://success"
+        }
+      ],
+      "rules": [
+        {
+          "server": "local",
+          "rule_set": [
+                        "geoip-ir"
+          ]
+        },
+        {
+          "server": "block",
+          "rule_set": [
+                        "geosite-category-ads-all"
+          ]
+        }
+      ],
+      "final": "remote"
+    },
+    "inbounds": [
+      {
+        "type": "socks",
+        "tag": "socks",
+        "listen": "127.0.0.1",
+        "listen_port": 10808,
+        "domain_strategy": "prefer_ipv4",
+        "sniff": true,
+        "sniff_override_destination": true
+      },
+      {
+        "type": "http",
+        "tag": "http",
+        "listen": "127.0.0.1",
+        "listen_port": 10809,
+        "domain_strategy": "prefer_ipv4",
+        "sniff": true,
+        "sniff_override_destination": true
+      }
+    ],
+    "outbounds": [
+      {
+        "type": "wireguard",
+        "tag": "proxy",
+        "detour": "warp ir",
+        "server": "188.114.98.200",
+        "server_port": 500,
+        "local_address": [
+                    "172.16.0.2/32",
+                    "2606:4700:110:8647:5ccc:a119:8fa3:8a2f/128"
+        ],
+        "private_key": "mCWbrMd/ejQ+wPhbOURIX8xIPblzuGXMpaSORmlqb3k=",
+        "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+        "reserved": [
+                    165,
+                    48,
+                    74
+        ],
+        "mtu": 1280
+      },
+      {
+        "type": "wireguard",
+        "tag": "warp ir",
+        "server": "188.114.98.200",
+        "server_port": 500,
+        "local_address": [
+                    "172.16.0.2/32",
+                    "2606:4700:110:85d9:bbbd:153e:b7c6:9d0f/128"
+        ],
+        "private_key": "4CWNo9/LVaS54olCKSWtlmjSExtNNb2D4bBbVlbUKWE=",
+        "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+        "reserved": [
+                    178,
+                    167,
+                    30
+        ],
+        "mtu": 1280
+      },
+      {
+        "type": "direct",
+        "tag": "direct"
+      },
+      {
+        "type": "block",
+        "tag": "block"
+      },
+      {
+        "type": "dns",
+        "tag": "dns_out"
+      }
+    ],
+    "route": {
+      "rules": [
+        {
+          "outbound": "dns_out",
+          "protocol": [
+                        "dns"
+          ]
+        },
+        {
+          "outbound": "block",
+          "ip_cidr": [
+                        "10.10.34.34",
+                        "10.10.34.35",
+                        "10.10.34.36"
+          ]
+        },
+        {
+          "outbound": "direct",
+          "rule_set": [
+                        "geosite-private"
+          ]
+        },
+        {
+          "outbound": "direct",
+          "ip_is_private": true
+        },
+        {
+          "outbound": "block",
+          "rule_set": [
+                        "geosite-category-ads-all"
+          ]
+        },
+        {
+          "outbound": "direct",
+          "domain": [
+                        "ir"
+          ],
+          "domain_suffix": [
+                        ".ir"
+          ],
+          "rule_set": [
+                        "geosite-category-ir"
+          ]
+        },
+        {
+          "outbound": "direct",
+          "rule_set": [
+                        "geoip-ir"
+          ]
+        },
+        {
+          "outbound": "proxy",
+          "port_range": [
+                        "0:65535"
+          ]
+        }
+      ],
+      "rule_set": [
+        {
+          "tag": "geosite-private",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-private.srs",
+          "download_detour": "proxy"
+        },
+        {
+          "tag": "geosite-category-ads-all",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+          "download_detour": "proxy"
+        },
+        {
+          "tag": "geosite-category-ir",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ir.srs",
+          "download_detour": "proxy"
+        },
+        {
+          "tag": "geoip-ir",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+          "download_detour": "proxy"
+        }
+      ]
+    },
+    "experimental": {
+      "cache_file": {
+        "enabled": true
+      },
+      "clash_api": {
+        "external_controller": "127.0.0.1:10814"
+      }
+    }
+  }
+]
