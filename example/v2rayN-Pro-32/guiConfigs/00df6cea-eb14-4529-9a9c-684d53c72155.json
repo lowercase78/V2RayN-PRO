@@ -8,9 +8,9 @@
         "2606:4700::6810:f9f9"
       ],
       "engage.cloudflareclient.com": [
-        "188.114.96.106",
-        "188.114.97.253",
-        "188.114.98.158"
+        "188.114.96.0",
+        "188.114.97.25",
+        "188.114.98.15"
       ]
     },
     "servers": [
@@ -25,7 +25,7 @@
       "settings": {
         "address": "engage.cloudflareclient.com",
         "network": "udp",
-        "port": 500
+        "port": 1387
       },
       "tag": "warp-in"
     }
@@ -42,9 +42,13 @@
           "2606:4700:110:8dd8:dd2a:2b37:9b01:c05/128"
         ],
         "mtu": 1280,
+        "wnoise": "ee0000000108aaaa",
+        "wnoisedelay": "1",
+        "wnoisecount": "15",
+        "wpayloadsize": "10",
         "peers": [
           {
-            "endpoint": "engage.cloudflareclient.com:500",
+            "endpoint": "engage.cloudflareclient.com:1387",
             "publicKey": "bmXOC\u002BF1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
           }
         ],
