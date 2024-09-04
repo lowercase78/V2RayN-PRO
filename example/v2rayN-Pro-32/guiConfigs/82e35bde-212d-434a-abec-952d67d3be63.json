@@ -1,0 +1,84 @@
+{
+  "dns": {
+    "hosts": {
+      "cloudflare-dns.com": [
+        "104.16.248.249",
+        "104.16.249.249",
+        "2606:4700::6810:f8f9",
+        "2606:4700::6810:f9f9"
+      ],
+      "engage.cloudflareclient.com": [
+        "188.114.96.106",
+        "188.114.97.253",
+        "188.114.98.158"
+      ]
+    },
+    "servers": [
+      "https://cloudflare-dns.com/dns-query"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "::",
+      "port": 2408,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "engage.cloudflareclient.com",
+        "network": "udp",
+        "port": 500
+      },
+      "tag": "warp-in"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "wireguard",
+      "settings": {
+        "address": [
+          "172.16.0.2/32",
+          "2606:4700:110:8dd8:dd2a:2b37:9b01:c05/128"
+        ],
+        "mtu": 1280,
+        "peers": [
+          {
+            "endpoint": "engage.cloudflareclient.com:500",
+            "publicKey": "bmXOC\u002BF1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+          }
+        ],
+        "reserved": [
+          164,
+          27,
+          158
+        ],
+        "secretKey": "0MNNcm3KOHBADYGdj4TdtGDVCSiuSRub8vhxlP47HVc="
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "remarks": "\u2728 WARP Proxy (use this with WireGuard)",
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "warp-in"
+        ],
+        "outboundTag": "proxy"
+      },
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out"
+      }
+    ]
+  },
+  "stats": {}
+}

@@ -68,9 +68,9 @@
     {
       "type": "wireguard",
       "tag": "proxy",
+      "detour": "warp ir",
       "server": "188.114.98.200",
       "server_port": 500,
-      "detour": "warp ir",
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8647:5ccc:a119:8fa3:8a2f/128"

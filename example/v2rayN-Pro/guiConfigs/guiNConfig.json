@@ -1,5 +1,5 @@
 {
-  "indexId": "5652771643850943480",
+  "indexId": "5061532679465078892",
   "subIndexId": "4723723187883255307",
   "systemProxyExceptions": "",
   "systemProxyAdvancedProtocol": null,
@@ -50,11 +50,15 @@
     "keepOlderDedupl": false,
     "ignoreGeoUpdateCore": true,
     "autoUpdateInterval": 0,
-    "checkPreReleaseUpdate": false,
+    "checkPreReleaseUpdate": true,
     "enableSecurityProtocolTls13": false,
     "trayMenuServersLimit": 20,
     "enableHWA": false,
     "enableLog": true
+  },
+  "msgUIItem": {
+    "mainMsgFilter": "",
+    "autoRefresh": true
   },
   "uiItem": {
     "enableAutoAdjustMainLvColWidth": true,
@@ -73,21 +77,20 @@
     "enableDragDropSort": true,
     "doubleClick2Activate": true,
     "autoHideStartup": false,
-    "mainMsgFilter": null,
     "mainColumnItem": [
       {
         "Name": "configType",
-        "Width": 67,
+        "Width": 84,
         "Index": 0
       },
       {
         "Name": "remarks",
-        "Width": 246,
+        "Width": 351,
         "Index": 1
       },
       {
         "Name": "address",
-        "Width": 282,
+        "Width": 327,
         "Index": 2
       },
       {
@@ -152,9 +155,15 @@
     "speedTestUrl": "https://speed.cloudflare.com/__down?bytes=100000000",
     "speedPingTestUrl": "https://www.google.com/generate_204"
   },
+  "mux4RayItem": {
+    "concurrency": 8,
+    "xudpConcurrency": 16,
+    "xudpProxyUDP443": "reject"
+  },
   "mux4SboxItem": {
     "protocol": "h2mux",
-    "max_connections": 8
+    "max_connections": 8,
+    "padding": null
   },
   "hysteriaItem": {
     "up_mbps": 100,
@@ -164,11 +173,11 @@
     "ruleMode": 0,
     "enableIPv6": false,
     "enableMixinContent": false,
-    "proxiesSorting": 0,
-    "proxiesAutoRefresh": false,
+    "proxiesSorting": 2,
+    "proxiesAutoRefresh": true,
     "proxiesAutoDelayTestInterval": 10,
-    "connectionsSorting": 0,
-    "connectionsAutoRefresh": false,
+    "connectionsSorting": 4,
+    "connectionsAutoRefresh": true,
     "connectionsRefreshInterval": 2
   },
   "systemProxyItem": {
