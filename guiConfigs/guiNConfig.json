@@ -1,249 +1,260 @@
 {
-  "indexId": "5061532679465078892",
-  "subIndexId": "4723723187883255307",
-  "systemProxyExceptions": "",
-  "systemProxyAdvancedProtocol": null,
-  "runningCoreType": 24,
-  "coreBasicItem": {
-    "logEnabled": false,
-    "loglevel": "warning",
-    "muxEnabled": false,
-    "defAllowInsecure": false,
-    "defFingerprint": "firefox",
-    "defUserAgent": "firefox",
-    "enableFragment": true,
-    "enableCacheFile4Sbox": true
+  "IndexId": "4965994556484559482",
+  "SubIndexId": "4723723187883255307",
+  "RunningCoreType": 24,
+  "CoreBasicItem": {
+    "LogEnabled": false,
+    "Loglevel": "warning",
+    "MuxEnabled": false,
+    "DefAllowInsecure": false,
+    "DefFingerprint": "firefox",
+    "DefUserAgent": "firefox",
+    "EnableFragment": true,
+    "EnableCacheFile4Sbox": true
   },
-  "tunModeItem": {
-    "enableTun": false,
-    "strictRoute": true,
-    "stack": "gvisor",
-    "mtu": 9000,
-    "enableExInbound": false,
-    "enableIPv6Address": true
+  "TunModeItem": {
+    "EnableTun": false,
+    "StrictRoute": true,
+    "Stack": "gvisor",
+    "Mtu": 9000,
+    "EnableExInbound": false,
+    "EnableIPv6Address": true,
+    "LinuxSudoPwd": null
   },
-  "kcpItem": {
-    "mtu": 1350,
-    "tti": 50,
-    "uplinkCapacity": 12,
-    "downlinkCapacity": 100,
-    "congestion": false,
-    "readBufferSize": 2,
-    "writeBufferSize": 2
+  "KcpItem": {
+    "Mtu": 1350,
+    "Tti": 50,
+    "UplinkCapacity": 12,
+    "DownlinkCapacity": 100,
+    "Congestion": false,
+    "ReadBufferSize": 2,
+    "WriteBufferSize": 2
   },
-  "grpcItem": {
-    "idle_timeout": 60,
-    "health_check_timeout": 20,
-    "permit_without_stream": false,
-    "initial_windows_size": 0
+  "GrpcItem": {
+    "IdleTimeout": null,
+    "HealthCheckTimeout": null,
+    "PermitWithoutStream": null,
+    "InitialWindowsSize": null
   },
-  "routingBasicItem": {
-    "domainStrategy": "AsIs",
-    "domainStrategy4Singbox": null,
-    "domainMatcher": null,
-    "routingIndexId": "5662777957270848102",
-    "enableRoutingAdvanced": true
+  "RoutingBasicItem": {
+    "DomainStrategy": "AsIs",
+    "DomainStrategy4Singbox": null,
+    "DomainMatcher": null,
+    "RoutingIndexId": "5662777957270848102"
   },
-  "guiItem": {
-    "autoRun": false,
-    "enableStatistics": true,
-    "keepOlderDedupl": false,
-    "ignoreGeoUpdateCore": true,
-    "autoUpdateInterval": 0,
-    "checkPreReleaseUpdate": true,
-    "enableSecurityProtocolTls13": false,
-    "trayMenuServersLimit": 20,
-    "enableHWA": false,
-    "enableLog": true
+  "GuiItem": {
+    "AutoRun": false,
+    "EnableStatistics": true,
+    "KeepOlderDedupl": false,
+    "IgnoreGeoUpdateCore": true,
+    "AutoUpdateInterval": 0,
+    "EnableSecurityProtocolTls13": false,
+    "TrayMenuServersLimit": 20,
+    "EnableHWA": false,
+    "EnableLog": true
   },
-  "msgUIItem": {
-    "mainMsgFilter": "",
-    "autoRefresh": true
+  "MsgUIItem": {
+    "MainMsgFilter": "",
+    "AutoRefresh": true
   },
-  "uiItem": {
-    "enableAutoAdjustMainLvColWidth": true,
-    "enableUpdateSubOnlyRemarksExist": false,
-    "mainWidth": 1282,
-    "mainHeight": 800,
-    "mainGirdHeight1": 325,
-    "mainGirdHeight2": 325,
-    "mainGirdOrientation": 1,
-    "colorModeDark": false,
-    "followSystemTheme": true,
-    "colorPrimaryName": null,
-    "currentLanguage": "en",
-    "currentFontFamily": null,
-    "currentFontSize": 0,
-    "enableDragDropSort": true,
-    "doubleClick2Activate": true,
-    "autoHideStartup": false,
-    "mainColumnItem": [
+  "UiItem": {
+    "EnableAutoAdjustMainLvColWidth": true,
+    "EnableUpdateSubOnlyRemarksExist": false,
+    "MainWidth": 1369,
+    "MainHeight": 804,
+    "MainGirdHeight1": 327,
+    "MainGirdHeight2": 327,
+    "MainGirdOrientation": 1,
+    "ColorModeDark": false,
+    "FollowSystemTheme": true,
+    "ColorPrimaryName": null,
+    "CurrentLanguage": "en",
+    "CurrentFontFamily": null,
+    "CurrentFontSize": 0,
+    "EnableDragDropSort": true,
+    "DoubleClick2Activate": true,
+    "AutoHideStartup": false,
+    "Hide2TrayWhenClose": false,
+    "MainColumnItem": [
       {
-        "Name": "configType",
+        "Name": "ConfigType",
         "Width": 84,
         "Index": 0
       },
       {
-        "Name": "remarks",
-        "Width": 351,
+        "Name": "Remarks",
+        "Width": 318,
         "Index": 1
       },
       {
-        "Name": "address",
-        "Width": 327,
+        "Name": "Address",
+        "Width": 280,
         "Index": 2
       },
       {
-        "Name": "port",
+        "Name": "Port",
         "Width": 57,
         "Index": 3
       },
       {
-        "Name": "network",
+        "Name": "Network",
         "Width": 90,
         "Index": 4
       },
       {
-        "Name": "streamSecurity",
+        "Name": "StreamSecurity",
         "Width": 53,
         "Index": 5
       },
       {
-        "Name": "subRemarks",
-        "Width": 167,
+        "Name": "SubRemarks",
+        "Width": 168,
         "Index": 6
       },
       {
-        "Name": "delayVal",
+        "Name": "DelayVal",
         "Width": 90,
         "Index": 7
       },
       {
-        "Name": "speedVal",
+        "Name": "SpeedVal",
         "Width": 101,
         "Index": 8
       },
       {
-        "Name": "todayUp",
+        "Name": "TodayUp",
         "Width": 150,
         "Index": 9
       },
       {
-        "Name": "todayDown",
+        "Name": "TodayDown",
         "Width": 166,
         "Index": 10
       },
       {
-        "Name": "totalUp",
+        "Name": "TotalUp",
         "Width": 144,
         "Index": 11
       },
       {
-        "Name": "totalDown",
+        "Name": "TotalDown",
         "Width": 161,
         "Index": 12
       }
     ],
-    "showInTaskbar": false
+    "ShowInTaskbar": false
   },
-  "constItem": {
-    "defIEProxyExceptions": "localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*",
-    "subConvertUrl": ""
+  "ConstItem": {
+    "DefIEProxyExceptions": "localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*",
+    "SubConvertUrl": "",
+    "GeoSourceUrl": null,
+    "SrsSourceUrl": null,
+    "RouteRulesTemplateSourceUrl": null
   },
-  "speedTestItem": {
-    "speedTestTimeout": 10,
-    "speedTestUrl": "https://speed.cloudflare.com/__down?bytes=100000000",
-    "speedPingTestUrl": "https://www.google.com/generate_204"
+  "SpeedTestItem": {
+    "SpeedTestTimeout": 10,
+    "SpeedTestUrl": "https://speed.cloudflare.com/__down?bytes=100000000",
+    "SpeedPingTestUrl": "https://www.google.com/generate_204"
   },
-  "mux4RayItem": {
-    "concurrency": 8,
-    "xudpConcurrency": 16,
-    "xudpProxyUDP443": "reject"
+  "Mux4RayItem": {
+    "Concurrency": 8,
+    "XudpConcurrency": 16,
+    "XudpProxyUDP443": "reject"
   },
-  "mux4SboxItem": {
-    "protocol": "h2mux",
-    "max_connections": 8,
-    "padding": null
+  "Mux4SboxItem": {
+    "Protocol": "h2mux",
+    "MaxConnections": 0,
+    "Padding": null
   },
-  "hysteriaItem": {
-    "up_mbps": 100,
-    "down_mbps": 100
+  "HysteriaItem": {
+    "UpMbps": 0,
+    "DownMbps": 0
   },
-  "clashUIItem": {
-    "ruleMode": 0,
-    "enableIPv6": false,
-    "enableMixinContent": false,
-    "proxiesSorting": 2,
-    "proxiesAutoRefresh": true,
-    "proxiesAutoDelayTestInterval": 10,
-    "connectionsSorting": 4,
-    "connectionsAutoRefresh": true,
-    "connectionsRefreshInterval": 2
+  "ClashUIItem": {
+    "RuleMode": 0,
+    "EnableIPv6": false,
+    "EnableMixinContent": false,
+    "ProxiesSorting": 2,
+    "ProxiesAutoRefresh": true,
+    "ProxiesAutoDelayTestInterval": 10,
+    "ConnectionsSorting": 4,
+    "ConnectionsAutoRefresh": true,
+    "ConnectionsRefreshInterval": 2
   },
-  "systemProxyItem": {
-    "sysProxyType": 0,
-    "systemProxyExceptions": "",
-    "notProxyLocalAddress": true,
-    "systemProxyAdvancedProtocol": null
+  "SystemProxyItem": {
+    "SysProxyType": 0,
+    "SystemProxyExceptions": "",
+    "NotProxyLocalAddress": true,
+    "SystemProxyAdvancedProtocol": null
   },
-  "inbound": [
+  "WebDavItem": {
+    "Url": null,
+    "UserName": null,
+    "Password": null,
+    "DirName": null
+  },
+  "CheckUpdateItem": {
+    "CheckPreReleaseUpdate": false,
+    "SelectedCoreTypes": null
+  },
+  "Inbound": [
     {
-      "localPort": 10808,
-      "protocol": "socks",
-      "udpEnabled": true,
-      "sniffingEnabled": true,
-      "destOverride": [
+      "LocalPort": 10808,
+      "Protocol": "socks",
+      "UdpEnabled": true,
+      "SniffingEnabled": true,
+      "DestOverride": [
         "http",
         "tls"
       ],
-      "routeOnly": false,
-      "allowLANConn": false,
-      "newPort4LAN": false,
-      "user": "",
-      "pass": ""
+      "RouteOnly": false,
+      "AllowLANConn": false,
+      "NewPort4LAN": false,
+      "User": "",
+      "Pass": ""
     }
   ],
-  "globalHotkeys": null,
-  "coreTypeItem": [
+  "GlobalHotkeys": null,
+  "CoreTypeItem": [
     {
-      "configType": 1,
-      "coreType": 2
+      "ConfigType": 1,
+      "CoreType": 2
     },
     {
-      "configType": 2,
-      "coreType": 2
+      "ConfigType": 2,
+      "CoreType": 2
     },
     {
-      "configType": 3,
-      "coreType": 2
+      "ConfigType": 3,
+      "CoreType": 2
     },
     {
-      "configType": 4,
-      "coreType": 2
+      "ConfigType": 4,
+      "CoreType": 2
     },
     {
-      "configType": 5,
-      "coreType": 2
+      "ConfigType": 5,
+      "CoreType": 2
     },
     {
-      "configType": 6,
-      "coreType": 2
+      "ConfigType": 6,
+      "CoreType": 2
     },
     {
-      "configType": 7,
-      "coreType": 2
+      "ConfigType": 7,
+      "CoreType": 2
     },
     {
-      "configType": 8,
-      "coreType": 2
+      "ConfigType": 8,
+      "CoreType": 2
     },
     {
-      "configType": 9,
-      "coreType": 2
+      "ConfigType": 9,
+      "CoreType": 2
     },
     {
-      "configType": 10,
-      "coreType": 2
+      "ConfigType": 10,
+      "CoreType": 2
     }
   ]
 }
