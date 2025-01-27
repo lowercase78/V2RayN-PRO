@@ -5,8 +5,8 @@
 [README](https://github.com/XTLS/Xray-core#readme) is open, so feel free to submit your project [here](https://github.com/XTLS/Xray-core/pulls).
 
 ## Donation & NFTs
-
-[Announcement of NFTs by Project X](https://github.com/XTLS/Xray-core/discussions/3633)
+refer to original repo if you want to donate them:<p>
+https://github.com/XTLS/Xray-core
 
 ## License
 
@@ -32,11 +32,12 @@
 - Docker
   - [ghcr.io/xtls/xray-core](https://ghcr.io/xtls/xray-core) (**Official**)
   - [teddysun/xray](https://hub.docker.com/r/teddysun/xray)
+  - [wulabing/xray_docker](https://github.com/wulabing/xray_docker)
 - Web Panel
-  - [3X-UI](https://github.com/MHSanaei/3x-ui), [X-UI](https://github.com/alireza0/x-ui), [Xray-UI](https://github.com/qist/xray-ui)
-  - [Hiddify](https://github.com/hiddify/hiddify-config)
+  - [3x-ui](https://github.com/MHSanaei/3x-ui)
   - [Marzban](https://github.com/Gozargah/Marzban)
-  - [Libertea](https://github.com/VZiChoushaDui/Libertea)
+  - [Xray-UI](https://github.com/qist/xray-ui)
+  - [Hiddify](https://github.com/hiddify/Hiddify-Manager)
 - One Click
   - [Xray-REALITY](https://github.com/zxcvos/Xray-script), [xray-reality](https://github.com/sajjaddg/xray-reality), [reality-ezpz](https://github.com/aleskxyz/reality-ezpz)
   - [Xray_bash_onekey](https://github.com/hello-yunshu/Xray_bash_onekey), [XTool](https://github.com/LordPenguin666/XTool)
@@ -75,8 +76,10 @@
   - [Furious](https://github.com/LorenEteval/Furious)
   - [Invisible Man - Xray](https://github.com/InvisibleManVPN/InvisibleMan-XRayClient)
 - Android
+  - [MahsaNG](https://github.com/GFW-knocker/MahsaNG)
   - [v2rayNG](https://github.com/2dust/v2rayNG)
   - [X-flutter](https://github.com/XTLS/X-flutter)
+  - [SaeedDev94/Xray](https://github.com/SaeedDev94/Xray)
 - iOS & macOS arm64
   - [FoXray](https://apps.apple.com/app/foxray/id6448898396)
   - [Streisand](https://apps.apple.com/app/streisand/id6450534064)
