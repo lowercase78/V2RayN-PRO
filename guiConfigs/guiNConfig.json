@@ -77,22 +77,22 @@
     "MainColumnItem": [
       {
         "Name": "ConfigType",
-        "Width": 115,
+        "Width": 97,
         "Index": 0
       },
       {
         "Name": "Remarks",
-        "Width": 410,
+        "Width": 237,
         "Index": 1
       },
       {
         "Name": "Address",
-        "Width": 338,
+        "Width": 134,
         "Index": 2
       },
       {
         "Name": "Port",
-        "Width": 67,
+        "Width": 58,
         "Index": 3
       },
       {
@@ -107,7 +107,7 @@
       },
       {
         "Name": "SubRemarks",
-        "Width": 212,
+        "Width": 106,
         "Index": 6
       },
       {
