@@ -1,5 +1,5 @@
 {
-  "IndexId": "4965994556484559482",
+  "IndexId": "5061510167910718375",
   "SubIndexId": "4723723187883255307",
   "RunningCoreType": 24,
   "CoreBasicItem": {
@@ -15,7 +15,7 @@
   "TunModeItem": {
     "EnableTun": false,
     "StrictRoute": true,
-    "Stack": "gvisor",
+    "Stack": "mixed",
     "Mtu": 9000,
     "EnableExInbound": false,
     "EnableIPv6Address": true,
@@ -45,10 +45,10 @@
   "GuiItem": {
     "AutoRun": false,
     "EnableStatistics": true,
+    "DisplayRealTimeSpeed": true,
     "KeepOlderDedupl": false,
-    "IgnoreGeoUpdateCore": true,
     "AutoUpdateInterval": 0,
-    "EnableSecurityProtocolTls13": false,
+    "EnableSecurityProtocolTls13": true,
     "TrayMenuServersLimit": 20,
     "EnableHWA": false,
     "EnableLog": true
@@ -60,16 +60,15 @@
   "UiItem": {
     "EnableAutoAdjustMainLvColWidth": true,
     "EnableUpdateSubOnlyRemarksExist": false,
-    "MainWidth": 1369,
-    "MainHeight": 804,
-    "MainGirdHeight1": 327,
-    "MainGirdHeight2": 327,
+    "MainWidth": 1349,
+    "MainHeight": 784,
+    "MainGirdHeight1": 334,
+    "MainGirdHeight2": 333,
     "MainGirdOrientation": 1,
-    "ColorModeDark": false,
-    "FollowSystemTheme": true,
     "ColorPrimaryName": null,
+    "CurrentTheme": null,
     "CurrentLanguage": "en",
-    "CurrentFontFamily": null,
+    "CurrentFontFamily": "",
     "CurrentFontSize": 0,
     "EnableDragDropSort": true,
     "DoubleClick2Activate": true,
@@ -78,27 +77,27 @@
     "MainColumnItem": [
       {
         "Name": "ConfigType",
-        "Width": 84,
+        "Width": 115,
         "Index": 0
       },
       {
         "Name": "Remarks",
-        "Width": 318,
+        "Width": 410,
         "Index": 1
       },
       {
         "Name": "Address",
-        "Width": 280,
+        "Width": 338,
         "Index": 2
       },
       {
         "Name": "Port",
-        "Width": 57,
+        "Width": 67,
         "Index": 3
       },
       {
         "Name": "Network",
-        "Width": 90,
+        "Width": 93,
         "Index": 4
       },
       {
@@ -108,53 +107,53 @@
       },
       {
         "Name": "SubRemarks",
-        "Width": 168,
+        "Width": 212,
         "Index": 6
       },
       {
         "Name": "DelayVal",
-        "Width": 90,
+        "Width": 100,
         "Index": 7
       },
       {
         "Name": "SpeedVal",
-        "Width": 101,
+        "Width": 111,
         "Index": 8
       },
       {
         "Name": "TodayUp",
-        "Width": 150,
+        "Width": 163,
         "Index": 9
       },
       {
         "Name": "TodayDown",
-        "Width": 166,
+        "Width": 183,
         "Index": 10
       },
       {
         "Name": "TotalUp",
-        "Width": 144,
+        "Width": 155,
         "Index": 11
       },
       {
         "Name": "TotalDown",
-        "Width": 161,
+        "Width": 174,
         "Index": 12
       }
     ],
-    "ShowInTaskbar": false
+    "ShowInTaskbar": true
   },
   "ConstItem": {
-    "DefIEProxyExceptions": "localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*",
     "SubConvertUrl": "",
-    "GeoSourceUrl": null,
-    "SrsSourceUrl": null,
-    "RouteRulesTemplateSourceUrl": null
+    "GeoSourceUrl": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/{0}.dat",
+    "SrsSourceUrl": "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/{1}.srs",
+    "RouteRulesTemplateSourceUrl": "https://cdn.jsdelivr.net/gh/Chocolate4U/Iran-v2ray-rules@main/v2rayN/template.json"
   },
   "SpeedTestItem": {
     "SpeedTestTimeout": 10,
     "SpeedTestUrl": "https://speed.cloudflare.com/__down?bytes=100000000",
-    "SpeedPingTestUrl": "https://www.google.com/generate_204"
+    "SpeedPingTestUrl": "https://www.google.com/generate_204",
+    "MixedConcurrencyCount": 5
   },
   "Mux4RayItem": {
     "Concurrency": 8,
@@ -168,7 +167,8 @@
   },
   "HysteriaItem": {
     "UpMbps": 0,
-    "DownMbps": 0
+    "DownMbps": 0,
+    "HopInterval": 30
   },
   "ClashUIItem": {
     "RuleMode": 0,
@@ -177,13 +177,12 @@
     "ProxiesSorting": 2,
     "ProxiesAutoRefresh": true,
     "ProxiesAutoDelayTestInterval": 10,
-    "ConnectionsSorting": 4,
     "ConnectionsAutoRefresh": true,
     "ConnectionsRefreshInterval": 2
   },
   "SystemProxyItem": {
     "SysProxyType": 0,
-    "SystemProxyExceptions": "",
+    "SystemProxyExceptions": "localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*",
     "NotProxyLocalAddress": true,
     "SystemProxyAdvancedProtocol": null
   },
@@ -194,8 +193,19 @@
     "DirName": null
   },
   "CheckUpdateItem": {
-    "CheckPreReleaseUpdate": false,
-    "SelectedCoreTypes": null
+    "CheckPreReleaseUpdate": true,
+    "SelectedCoreTypes": [
+      "v2rayN",
+      "Xray",
+      "mihomo",
+      "sing_box",
+      "GeoFiles"
+    ]
+  },
+  "Fragment4RayItem": {
+    "Packets": "tlshello",
+    "Length": "10-20",
+    "Interval": "10-20"
   },
   "Inbound": [
     {
@@ -211,10 +221,11 @@
       "AllowLANConn": false,
       "NewPort4LAN": false,
       "User": "",
-      "Pass": ""
+      "Pass": "",
+      "SecondLocalPortEnabled": false
     }
   ],
-  "GlobalHotkeys": null,
+  "GlobalHotkeys": [],
   "CoreTypeItem": [
     {
       "ConfigType": 1,
