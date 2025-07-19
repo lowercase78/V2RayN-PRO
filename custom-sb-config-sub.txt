@@ -61,49 +61,43 @@
         "timestamp": true
     },
     "outbounds": [
-        {
-            "detour": "warp ir",
-            "local_address": [
-                "172.16.0.2/32",
-                "2606:4700:110:8647:5ccc:a119:8fa3:8a2f/128"
-            ],
-            "mtu": 1280,
-            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "private_key": "mCWbrMd/ejQ+wPhbOURIX8xIPblzuGXMpaSORmlqb3k=",
-            "reserved": [
-                165,
-                48,
-                74
-            ],
-            "server": "engage.cloudflareclient.com",
-            "server_port": 2408,
-            "tag": "proxy",
-            "type": "wireguard"
-        },
-        {
-            "local_address": [
-                "172.16.0.2/32"
-            ],
-            "mtu": 1280,
-            "peers": [
-                {
-                    "allowed_ips": [
-                        "0.0.0.0/0"
-                    ],
-                    "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                    "reserved": [
-                        178,
-                        167,
-                        30
-                    ],
-                    "server": "warp_auto",
-                    "server_port": 0
-                }
-            ],
-            "private_key": "4CWNo9/LVaS54olCKSWtlmjSExtNNb2D4bBbVlbUKWE=",
-            "tag": "warp ir",
-            "type": "wireguard"
-        },
+    {
+      "type": "wireguard",
+	  "detour": "warp ir",
+      "tag": "proxy",
+      "server": "188.114.98.224",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:83a6:9bcf:3aa4:69e:b24b/128"
+      ],
+      "private_key": "Djet4NKTxFCR1mF2EULYIUJkRtx52YTPod+3b/X1ywY=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        105,
+        47,
+        184
+      ],
+      "mtu": 1280
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp ir",
+      "server": "warp_auto",
+      "server_port": 0,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8fc9:dda0:ccc1:6e37:fdad/128"
+      ],
+      "private_key": "kHNioDrJTCYcohYNmuEKeR1I+GvGIGJZG9veb1P5yMY=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        220,
+        95,
+        197
+      ],
+      "mtu": 1280
+    },
         {
             "tag": "direct",
             "type": "direct"
@@ -120,28 +114,28 @@
     "route": {
         "rule_set": [
             {
-                "download_detour": "proxy",
+                "download_detour": "warp ir",
                 "format": "binary",
                 "tag": "geosite-private",
                 "type": "remote",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-private.srs"
             },
             {
-                "download_detour": "proxy",
+                "download_detour": "warp ir",
                 "format": "binary",
                 "tag": "geosite-category-ads-all",
                 "type": "remote",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs"
             },
             {
-                "download_detour": "proxy",
+                "download_detour": "warp ir",
                 "format": "binary",
                 "tag": "geosite-category-ir",
                 "type": "remote",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ir.srs"
             },
             {
-                "download_detour": "proxy",
+                "download_detour": "warp ir",
                 "format": "binary",
                 "tag": "geoip-ir",
                 "type": "remote",
