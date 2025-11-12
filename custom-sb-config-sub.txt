@@ -52,7 +52,6 @@
           "warp_scanner": {
             "enable_ip_scanner": true,
             "enable_port_scanner": true,
-            "cidrs": "188.114.96.0/24",
             "cidrs": "188.114.97.0/24"
           },
           "warp_noise": {
@@ -154,6 +153,15 @@
       "server": "local",
       "rewrite_ttl": 60,
       "client_subnet": "1.1.1.1"
+    }
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:10813"
     }
   }
 }
